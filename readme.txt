@@ -13,10 +13,13 @@ Afterwards the container can be run with
 docker run mosquitto
 
 For the python script running in a terminal:
-activate the virtual enviroment if asyncio and gmqtt is not installed globally in your system do so with source venv/bin/activate
+activate the virtual enviroment (see zip file) if asyncio and gmqtt is not installed globally in your system or your
+IDE does not create it do so with "source venv/bin/activate"
 then run main.py with python3 main.py
 
-if you now send a message via mosquitto_pub -h localhost -t "/event" -m '{"sensor_value":20.2}' it should be shown in the terminal
+if you now send a message via mosquitto_pub -h localhost -t "/event" -m '{"sensor_value":20.2}'
+it should be shown in the terminal
 If you send a burst of messages the program will print one message every 10 seconds (can be changed in main.py)
 
-Dockerization did not work for me. Since I am not as much expierinced in creating docker images (only using), the networking between the docker containers did not work.
+Dockerization did not work for me. Since I am not as much expierinced in creating docker images (only using),
+the networking between the docker containers did not work.
